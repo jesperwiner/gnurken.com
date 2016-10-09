@@ -6,10 +6,12 @@
     "start": "node server.js",
     "lint": "eslint src",
     "clean": "rimraf dist",
-    "build": "npm-run-all clean webpack:bundle",
-    "webpack:bundle": " webpack --type bundle --progress --colors --config webpack.config.prod.js"
+    "build": "npm-run-all clean prod webpack:bundle copy:bundle",
+    "prod": "set NODE_ENV=production",
+    "copy:bundle": "copy.files.bat",
+    "webpack:bundle": "webpack --type bundle --progress --colors --config webpack.config.prod.js"
   },
- "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/jesperwiner/gnurken.com"
   },
