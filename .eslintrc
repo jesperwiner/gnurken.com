@@ -6,6 +6,9 @@
     }
   },
   "rules": {
+    "no-multiple-empty-lines": [
+      1, {"max": 2},
+    ],
     "react/jsx-no-bind": [
       1, {
         "ignoreRefs": true,

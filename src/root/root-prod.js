@@ -1,17 +1,18 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import App from '../components/app';
+import Routes from '../routes';
 import configureStore from '../store';
 
-let store = configureStore();
+const store = configureStore();
 
 export default function Root() {
   return (
     <AppContainer>
       <Provider store={store}>
         <div>
-          <App />
+          <h1>prod</h1>
+          <Routes />
         </div>
       </Provider>
     </AppContainer>

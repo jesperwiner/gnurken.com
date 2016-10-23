@@ -3,28 +3,16 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Link } from 'react-router';
 import Menu from './menu';
 import Footer from './footer';
+import WowMoviesContainer from '../containers/wow-movies-container';
 import './app.scss';
 
+export const Games = ({ children, location: { pathname } }) => (
+  <div className="Image">
+    <h1>Games</h1>
+  </div>
+);
 
-const App = ({ children, location: { pathname } }) => {
-  // Only take the first-level part of the path as key, instead of the whole path.
-  const key = pathname.split('/')[1] || 'root'
-console.log('rendered');
-  return (
-    <div>
-      <ul>
-        <li><Link to="/about">Page 1</Link></li>
-        <li><Link to="/games">Page 2</Link></li>
-      </ul>
-      <ReactCSSTransitionGroup
-        component="div" transitionName="example"
-        transitionEnterTimeout={500} transitionLeaveTimeout={500}
-      >
-        {React.cloneElement(children || <div />, { key })}
-      </ReactCSSTransitionGroup>
-    </div>
-  )
-}
+//
 //
 // export default class App extends React.Component {
 //   render() {
@@ -70,5 +58,3 @@ const aApp = (props) => (
     </div>
   </div>
 );
-
-export default App;
