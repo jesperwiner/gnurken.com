@@ -1,0 +1,35 @@
+.home {
+}
+
+.latest-movies {
+  background-color: #111;
+  margin: 1rem 0.4rem 1rem;
+  padding: 0.4rem 0.4rem 0.4rem 0;
+
+  &__text {
+    background-color: #730b0b;
+    margin: 0.3rem 0 0.3rem 0;
+    padding: 0.2rem 4.2rem 0.2rem 0.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+.player {
+  &__col {
+    margin-bottom: 1rem;
+  }
+
+  &__box {
+    background-color: #444;
+    margin: 0.4rem;
+    padding: 0.4rem;
+
+    h4 {
+      margin: 0rem;
+      color: #CCC;
+      background-color: #373737;
+      padding: 0.5rem;
+    }
+  }
+
+}

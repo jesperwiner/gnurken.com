@@ -12,7 +12,7 @@ export default function Root() {
     <AppContainer>
       <Provider store={store}>
         <div>
-          <Routes />
+          <Routes store={store} />
           <DevTools />
         </div>
       </Provider>

@@ -21,6 +21,11 @@ module.exports = {
     // keeps hashes consistent between compilations
     new webpack.optimize.OccurenceOrderPlugin(),
     // minifies your code
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+      },
+    }),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
