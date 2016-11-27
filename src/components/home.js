@@ -6,23 +6,25 @@ import './home.scss';
 
 export const Home = () => (
   <div className="mainBody">
-    <Row xsAround className="latest-movies">
+    <Row xsAround className="entry">
       <Col xs={12}>
         <Row xs>
-          <h3 className="latest-movies__text">
-            Latest World of Warcraft Movies
-          </h3>
+          <Col xs>
+            <h3 className="entry__text">
+              Latest World of Warcraft Movies
+            </h3>
+          </Col>
         </Row>
         <Row xsAround>
           <Col xsCenter className="player__col">
             <div className="player__box">
-              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[0].youTubeId}`} />
+              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[0].youTubeId}`} width={'100%'} height={'100%'} />
               <h4>{`${wowMovies[0].name}`}</h4>
             </div>
           </Col>
           <Col xsCenter className="player__col">
             <div className="player__box">
-              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[1].youTubeId}`} />
+              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[1].youTubeId}`} width={'100%'} height={'100%'} />
               <h4>{`${wowMovies[1].name}`}</h4>
             </div>
           </Col>
@@ -30,24 +32,31 @@ export const Home = () => (
       </Col>
     </Row>
 
-    <Row xsAround className="latest-movies">
+    <Row xsAround className="entry">
       <Col xs={12}>
         <Row xs>
-          <h3 className="latest-movies__text">
-            Latest World of Warcraft Movies
-          </h3>
+          <Col xs>
+            <h3 className="entry__text entry__text--shorter">
+              The gaming rig
+            </h3>
+          </Col>
+          <Col xsEnd className="col--right">
+            <h3 className="entry__text entry__text--shorter">
+              The setup
+            </h3>
+          </Col>
         </Row>
         <Row xsAround>
           <Col xsCenter className="player__col">
             <div className="player__box">
-              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[0].youTubeId}`} />
-              <h4>{`${wowMovies[0].name}`}</h4>
+              <img src="../images/overkill/dator-1.JPG" className="cover" alt="computer" />
+              <h4>Case-Labs Mercury S8</h4>
             </div>
           </Col>
           <Col xsCenter className="player__col">
             <div className="player__box">
-              <ReactPlayer url={`https://www.youtube.com/watch?v=${wowMovies[1].youTubeId}`} />
-              <h4>{`${wowMovies[1].name}`}</h4>
+              <img src="../images/overkill/setup-1.JPG" className="cover" alt="computer" />
+              <h4>Ikea countertop desk</h4>
             </div>
           </Col>
         </Row>

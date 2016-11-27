@@ -1,3 +1,3 @@
-mkdir "\\blackjelly\web\next\static"
-copy /y .\dist\* \\blackjelly\web\next\static\
-copy /y .\index.html \\blackjelly\web\next\
+mkdir "\\blackjelly\web\static"
+copy /y .\dist\* \\blackjelly\web\static\
+copy /y .\index.html \\blackjelly\web\

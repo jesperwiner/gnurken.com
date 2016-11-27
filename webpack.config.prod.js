@@ -9,23 +9,23 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: 'static/',
+    publicPath: '/static/',
   },
   plugins: [
     // removes a lot of debugging code in React
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: JSON.stringify('production'),
+    //   },
+    // }),
     // keeps hashes consistent between compilations
-    new webpack.optimize.OccurenceOrderPlugin(),
-    // minifies your code
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-      },
-    }),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // // minifies your code
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compressor: {
+    //     warnings: false,
+    //   },
+    // }),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],

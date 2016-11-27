@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "description": "Gnurken",
   "scripts": {
-    "start": "node server.js",
+    "start:dev": "npm-run-all babeldev start",
+    "start": " node server.js",
     "lint": "eslint src",
     "clean": "rimraf dist",
-    "build": "npm-run-all clean prod webpack:bundle copy:bundle",
+    "build": "npm-run-all clean webpack:bundle copy:bundle",
+    "babeldev": "set BABEL_ENV=development",
+    "babelprod": "set BABEL_ENV=production",
     "prod": "set NODE_ENV=production",
     "copy:bundle": "copy.files.bat",
-    "webpack:bundle": "webpack --type bundle --progress --colors --config webpack.config.prod.js"
+    "webpack:bundle": "set BABEL_ENV=production&& set NODE_ENV=production&& webpack --type bundle --progress --colors --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
