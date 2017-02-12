@@ -19,6 +19,16 @@ const App = ({ children, location: { pathname } }) => {
           <div className="logo">
             <img src="../images/gnurken_logo.png" alt="Gnurken" />
             <div>The real Gnurken, not that other dude that took my name</div>
+
+            <div
+              className="fb-like"
+              data-href="https://www.facebook.com/Gnurken/"
+              data-layout="button_count"
+              data-action="like"
+              data-show-faces="false"
+              data-share="true"
+            >
+            </div>
           </div>
 
           <Sticky className="mini-gnurken" stickyClassName={'mini-gnurken__visible'}>
@@ -58,6 +68,11 @@ const App = ({ children, location: { pathname } }) => {
 
     </div>
   );
+};
+
+App.propTypes = {
+  children: React.PropTypes.node,
+  location: React.PropTypes.object,
 };
 
 export default App;

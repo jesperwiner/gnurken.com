@@ -7,9 +7,9 @@ const Menu = ({ routing }) => {
   return (
     <ul className="menu">
       <li className={path === '/' ? 'current' : ''}><Link to="/">Home</Link></li>
-      <li className={path === '/about' ? 'current' : ''}><Link to="/about">About</Link></li>
+      <li className={path.startsWith('/about') ? 'current' : ''}><Link to="/about">About</Link></li>
       <li className={path === '/games' ? 'current' : ''}><Link to="/games">Games</Link></li>
-      <li className={path === '/wow' ? 'current' : ''}><Link to="/wow">World of Warcraft Movies</Link></li>
+      <li className={path === '/wow' ? 'current' : ''}><Link to="/wow">WoW Movies</Link></li>
       <li className={path === '/undecided' ? 'current' : ''}><a href="http://undecided.gnurken.com">The Undecided Forum</a></li>
       <li className={path === '/contact' ? 'current' : ''}><Link to="/contact">Contact</Link></li>
     </ul>

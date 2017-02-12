@@ -50,13 +50,10 @@
 }
 
 @media all and (min-width: 1000px) {
-  .main    {
+  .main {
     flex: 10 0px;
     max-width: 1400px;
   }
-
-
-
   .aside-1 { order: 1; }
   .main    { order: 2; }
   .aside-2 { order: 3; }
@@ -101,6 +98,7 @@ h4 {
   }
 
   .logo {
+    position: relative;
     padding-top: 2rem;
     text-align: center;
     font-size: 0.9rem;
@@ -126,11 +124,10 @@ h4 {
     }
   }
 
-  .fb-page {
-    position: fixed;
+  .fb-like {
+    position: absolute;
     top: 1rem;
     right: 1rem;
-    border: 0.1rem solid;
   }
 }
 
@@ -154,7 +151,6 @@ h4 {
 
 .mainBody {
   background-color: #555;
-//padding: 1.2rem 1.6rem;
 }
 
 .mainBody-enter {
