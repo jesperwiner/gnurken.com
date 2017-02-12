@@ -33,20 +33,12 @@ const App = ({ children, location: { pathname } }) => {
 
           <Sticky className="mini-gnurken" stickyClassName={'mini-gnurken__visible'}>
             <div className="menu__container">
-              <Row>
-                <Col xs={3} sm={2} lg={2} className="">
-                  <img src="../images/gnurken_logo.png" alt="Gnurken" />
-                </Col>
-                <Col xs={6} sm={8} lg={8} className="menu__container--adjust">
-                  <MenuContainer />
-                </Col>
-                <Col xs={3} sm={2} lg={2} className="">
-                  <img src="../images/gnurken_logo.png" alt="Gnurken" style={{ opacity: 0 }} />
-                </Col>
-              </Row>
+              <MenuContainer />
               <div className="menu__container--border" />
             </div>
           </Sticky>
+
+
 
           <div id="mainBody">
             <ReactCSSTransitionGroup
@@ -136,3 +128,18 @@ export default App;
 //     </Col>
 //   </Row>
 // </StickyContainer>
+
+
+
+// <Row>
+//   <Col xs={3} sm={2} lg={2} className="">
+//     <img src="../images/gnurken_logo.png" alt="Gnurken" />
+//   </Col>
+//   <Col xs={6} sm={8} lg={8} className="menu__container--adjust">
+//
+//
+//   </Col>
+//   <Col xs={3} sm={2} lg={2} className="">
+//     <img src="../images/gnurken_logo.png" alt="Gnurken" style={{ opacity: 0 }} />
+//   </Col>
+// </Row>

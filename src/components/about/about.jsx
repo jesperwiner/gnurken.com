@@ -30,7 +30,7 @@ export const About = () => (
         </Col>
 
         <Col xs={12} sm={12} md={6} lg={6} className="entry__col">
-          <h3 className="entry__text entry__text--shorter">
+          <h3 className="entry__text entry__text">
             Top 3 favorite movies
           </h3>
 

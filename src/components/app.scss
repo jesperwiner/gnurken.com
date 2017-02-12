@@ -7,10 +7,8 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-
   font-weight: bold;
   text-align: center;
 }
@@ -30,7 +28,7 @@
 
 .main {
   text-align: left;
-  //background: deepskyblue;
+  max-width: 1400px;
 }
 
 .aside-1 {
@@ -45,15 +43,11 @@
 //  background: hotpink;
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 768px) {
   .aside { flex: 1 auto; }
 }
 
-@media all and (min-width: 1000px) {
-  .main {
-    flex: 10 0px;
-    max-width: 1400px;
-  }
+@media all and (min-width: 768px) {
   .aside-1 { order: 1; }
   .main    { order: 2; }
   .aside-2 { order: 3; }
@@ -107,22 +101,6 @@ h4 {
     font-style: italic;
   }
 
-  .mini-gnurken {
-    img {
-      padding: 0.5rem;
-      opacity: 0;
-      width: 12rem;
-      height: 2.2rem;
-      transition: opacity 100ms ease-out;
-    }
-  }
-
-  .mini-gnurken__visible {
-    img {
-      opacity: 1;
-      transition: opacity 100ms ease-in;
-    }
-  }
 
   .fb-like {
     position: absolute;
@@ -172,6 +150,7 @@ h4 {
 }
 
 .footer {
+  color: #cecece;
   background-color: #353535;
   padding: 0 0 1rem 0;
   margin: 0;
