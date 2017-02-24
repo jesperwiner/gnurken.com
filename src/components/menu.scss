@@ -48,3 +48,7 @@
     margin-right: 0.1rem;
   }
 }
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover {
+  background-color: #555555;
+}

@@ -3,7 +3,6 @@ import { hashHistory, Router, Route, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import App from './components/app';
 import { Home } from './components/home';
-import AboutSubMenu from './components/about/about-container';
 import { About } from './components/about/about';
 import { Rig } from './components/about/rig';
 import { Games } from './components/games';
@@ -15,10 +14,8 @@ export default function Routes({ store }) {
     <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
-        <Route path="/about" component={AboutSubMenu}>
-          <IndexRoute component={About} />
-          <Route path="/about/rig" component={Rig} />
-        </Route>
+        <Route path="/about" component={About} />
+        <Route path="/about/rig" component={Rig} />
         <Route path="/games" component={Games} />
       </Route>
       <Route path="*" component={NotFound} />
