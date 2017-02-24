@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import './menu.scss';
+import './sub-menu.scss';
 
 const AboutSubMenu = ({ children, routing }) => {
   const path = routing.locationBeforeTransitions.pathname;

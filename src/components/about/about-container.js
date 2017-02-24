@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import AboutSubMenu from './menu';
+import AboutSubMenu from './sub-menu';
 
 const mapStateToProps = ({ routing }) => ({
   routing,
