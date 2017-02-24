@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import wowMovies from '../data/wow-movies';
 import ReactPlayer from 'react-player';
@@ -17,30 +17,24 @@ function renderVideo(item) {
   );
 }
 
-const WowMovies = ({ filterWoWMovies }) => {
-  const kalle = filterWoWMovies();
-
-  return (
-    <Grid fluid className="">
-      <button onClick={filterWoWMovies}>testa</button>
-      <Row>
-        <Col xs={12} sm={6} lg={4}>
-          {wowMovies.map((item, index) => (
-            (isEven(index) === true) ? renderVideo(item) : null
-          ))}
-        </Col>
-        <Col xs={12} sm={6} lg={4}>
-          {wowMovies.map((item, index) => (
-            (isEven(index) === false) ? renderVideo(item) : null
-          ))}
-        </Col>
-      </Row>
-    </Grid>
-  );
-};
+const WowMovies = () => (
+  <Grid fluid className="">
+    <Row>
+      <Col xs={12} sm={6} lg={4}>
+        {wowMovies.map((item, index) => (
+          (isEven(index) === true) ? renderVideo(item) : null
+        ))}
+      </Col>
+      <Col xs={12} sm={6} lg={4}>
+        {wowMovies.map((item, index) => (
+          (isEven(index) === false) ? renderVideo(item) : null
+        ))}
+      </Col>
+    </Row>
+  </Grid>
+);
 
 WowMovies.propTypes = {
-  filterWoWMovies: PropTypes.func,
 };
 
 export default WowMovies;

@@ -13,18 +13,18 @@ export const About = () => (
           <h4 className="normal-text">
             My name is Jesper Winér, aka "Gnurken" online. Currently 41 years old and work
             with web development and related applications at Nordnet Bank in Alvik/Stockholm.
-            Mostly with javascript (react, es6, css3) but some Java and C# and Perl.
+            Mostly with javascript (react, es6, css3) but also some Java and C# and Perl.
             <br />
             <br />
-            Spare time is centered around gaming in all forms. Stopped with World of Warcraft
+            Spare time is centered around gaming in all forms. I've stopped with World of Warcraft
             for now but who knows, maybe I get dragged in again. Was playing WoW for over 11 years
             since 2005. But I also enjoy working on other projects, like this webpage. Using it as
-            training ground for new techniques. Also trying to learn
-            Adobe Premiere but I'm making all videos in an old Sony Vegas version for now.
+            a training ground for new techniques. Also trying to learn
+            Adobe Premiere but making all videos in an old Sony Vegas version for now.
             Premiere is quite hard to use.
             <br />
             <br />
-            Here you will find all my WoW-Movies (and a few some others that friends made that I'm hosting),
+            Here you will find all my WoW-Movies (and a few others that some friends have made that I'm hosting),
             C# projects and galleries of my retro gaming collection and new builds.
           </h4>
         </Col>
@@ -50,9 +50,9 @@ export const About = () => (
             <a className="normal-text" href="http://www.imdb.com/title/tt0080684/?ref_=nv_sr_3">
               <img src="../../images/empire.png" className="image" alt="Empire Striked Back" />
               No surprise that a computer geek likes fantasy and sci-fi. The Empire Strikes Back is the
-              best of them and proves that George Lucas is a better storyteller than a director. Some of the
-              special edition additions are ok, the Wampa on Hoth didn't need to be changed,
-              but the Cloud City extensions are great.
+              best of them and proves that George Lucas is a better storyteller than director. Some of the
+              special edition additions are ok but the Wampa on Hoth didn't need to be changed,
+              the Cloud City extensions are great however.
               <br />
               <br />
             </a>
@@ -76,7 +76,7 @@ export const About = () => (
             <a href="http://www.imdb.com/title/tt0133093/"> The Matrix</a>,
             <a href="http://www.imdb.com/title/tt0081590/"> Sällskapsresan</a>,
             <a href="http://www.imdb.com/title/tt0090605/"> Aliens</a>,
-            <a href="http://www.imdb.com/title/tt0095016/"> Die Hard</a>,
+            <a href="http://www.imdb.com/title/tt0095016/"> Die Hard</a> &
             <a href="http://www.imdb.com/title/tt0468569/"> The Dark Knight</a>.
             <br />
             <br />
@@ -113,6 +113,18 @@ export const About = () => (
             <img src="../../images/jesper.png" className="cover" alt="Jesper" />
             <h4>Linked-In</h4>
           </div>
+        </Col>
+      </Row>
+
+      <Row xs >
+        <Col xs>
+          <h3></h3>
+        </Col>
+      </Row>
+
+      <Row xs >
+        <Col xs>
+          <h3></h3>
         </Col>
       </Row>
 

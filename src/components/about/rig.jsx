@@ -2,8 +2,8 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import './rig.scss';
 
-export const Rig = ({ children, location: { pathname } }) => (
-  <div className="mainBody">
+export const Rig = () => (
+  <div className="about">
     <Grid fluid className="main-grid">
       <Row xs>
         <Col xs={12} sm={12} md={12} lg={6} className="entry__col">
@@ -30,6 +30,25 @@ export const Rig = ({ children, location: { pathname } }) => (
 
         </Col>
       </Row>
+
+      <Row xs >
+        <Col xs>
+          <h3></h3>
+        </Col>
+      </Row>
+
+      <Row xs >
+        <Col xs>
+          <h3></h3>
+        </Col>
+      </Row>
+
+      <Row xs >
+        <Col xs>
+          <h3></h3>
+        </Col>
+      </Row>
+
     </Grid>
   </div>
 );
