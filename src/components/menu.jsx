@@ -31,8 +31,13 @@ const Menu = ({ routing }) => {
             </LinkContainer>
           </NavDropdown>
 
-          <NavDropdown id={2} eventKey={3} title="Projects">
-            <MenuItem eventKey={3.1}>Recent</MenuItem>
+          <NavDropdown id={2} eventKey={'/projects'} title="Projects">
+            <LinkContainer to="/projects">
+              <MenuItem eventKey={'/projects'}>Recent</MenuItem>
+            </LinkContainer>
+            <LinkContainer to="/projects/amiga1200">
+              <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200</MenuItem>
+            </LinkContainer>
             <MenuItem eventKey={3.2}>Other projects</MenuItem>
           </NavDropdown>
 

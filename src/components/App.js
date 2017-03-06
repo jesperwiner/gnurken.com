@@ -16,7 +16,9 @@ const App = ({ children, location: { pathname } }) => {
         <StickyContainer className="app">
 
           <div className="logo">
-            <img src="../images/gnurken_logo.png" alt="Gnurken" />
+            <a href="https://www.gnurken.com">
+              <img src="../images/gnurken_logo.png" alt="Gnurken" />
+            </a>
             <div>The real Gnurken, not that other dude that took my name</div>
 
             <div
@@ -28,6 +30,7 @@ const App = ({ children, location: { pathname } }) => {
               data-share="true"
             >
             </div>
+
           </div>
 
           <Sticky className="mini-gnurken" stickyClassName={'mini-gnurken__visible'}>
