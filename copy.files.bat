@@ -1,3 +1,3 @@
 mkdir "\\blackjelly\web\static"
 copy /y .\dist\* \\blackjelly\web\static\
-copy /y .\index.html \\blackjelly\web\
+copy /y .\dist\index.html \\blackjelly\web\

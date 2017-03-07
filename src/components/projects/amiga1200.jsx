@@ -21,9 +21,9 @@ export const Amiga1200 = () => (
           </div>
 
           <h4>
-            A very well presevered Amiga 1200 (rev 2B). Capactiors replaced (not by me). Floppy cleaned.
-            Harddrive is replaced with 8GB Compact Flash with a fresh install of <a href="http://classicwb.abime.net/">Classic WB</a>
-            and WHDLoad with all the games. The expansion slot is occopied with a brand new 8MB Analogic card.
+            A very well presevered Amiga 1200 (rev 2B). Capacitors are replaced (not by me). Floppy cleaned and working perfectly.
+            Harddrive is replaced with a 8GB Compact Flash with a fresh install of <a href="http://classicwb.abime.net/">Classic WB </a>
+             and WHDLoad with all games. The expansion slot is occupied with a brand new 8MB Analogic card.
           </h4>
 
         </Col>
@@ -51,7 +51,7 @@ export const Amiga1200 = () => (
 
           <h4>
             Boots really fast to Workbench from the flash card. Having extra memory makes it a lot faster to open directories.
-            The Amiga OS wasn't really designed with this big drives in mind. The normal HDD at the time were 120MB not 4GB.
+            The Amiga OS wasn't really designed with such big hard drives in mind. The normal HDD at the time were 120MB not 4GB.
           </h4>
 
         </Col>
@@ -93,7 +93,7 @@ export const Amiga1200 = () => (
             so much easier to just play for a little while and don't have to set things up.
 <br></br><br></br>
             Have a working Commodore 64, Atari STE (upgraded to 4MB), another Amiga 1200 (with a 68030 accelerator). A broken Amiga 600 and 500+.
-            The 500+ is kinda ok. Just the DF0 is refusing to load diskettes. The 600 turns on sometimes. May need a capactior replacement. Thats for
+            The 500+ is kinda ok. Just the DF0 is refusing to load diskettes. The 600 turns on sometimes. It may need a capacitor replacement but that's for
             another time.
         </h4>
         </Col>

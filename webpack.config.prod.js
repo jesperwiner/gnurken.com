@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -8,10 +10,14 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     publicPath: '/static/',
   },
   plugins: [
+    new ManifestPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html.ejs',
+    }),
     // removes a lot of debugging code in React
     // new webpack.DefinePlugin({
     //   'process.env': {
