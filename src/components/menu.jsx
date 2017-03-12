@@ -4,7 +4,7 @@ import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import './menu.scss';
 
 const Menu = ({ routing }) => {
-  const path = routing.locationBeforeTransitions.pathname;
+  const path = routing.locationBeforeTransitions.pathname.split('/')[1];
   const handleClick = () => {
     window.location.assign('https://undecided.gnurken.com');
   };
@@ -18,7 +18,7 @@ const Menu = ({ routing }) => {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Nav activeKey={path}>
+        <Nav activeKey={`/${path}`}>
           <IndexLinkContainer to="/">
             <NavItem>Home</NavItem>
           </IndexLinkContainer>
@@ -38,12 +38,18 @@ const Menu = ({ routing }) => {
             <LinkContainer to="/projects/amiga1200">
               <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200</MenuItem>
             </LinkContainer>
-            <MenuItem eventKey={3.2}>Other projects</MenuItem>
+            <LinkContainer to="/projects/other">
+              <MenuItem eventKey={'/projects/other'}>Other projects</MenuItem>
+            </LinkContainer>
           </NavDropdown>
 
-          <NavDropdown id={3} eventKey={3} title="Movies">
-            <MenuItem eventKey={3.1}>World of Warcraft</MenuItem>
-            <MenuItem eventKey={3.2}>Other movies</MenuItem>
+          <NavDropdown id={3} eventKey={'/movies'} title="Movies">
+            <LinkContainer to="/movies/wow-movies">
+              <MenuItem eventKey={'/movies/wow-movies'}>World of Warcraft</MenuItem>
+            </LinkContainer>
+            <LinkContainer to="/movies/other">
+              <MenuItem eventKey={'/movies/other'}>Other Movies</MenuItem>
+            </LinkContainer>
           </NavDropdown>
           <NavItem onClick={handleClick}>The Undecided</NavItem>
         </Nav>

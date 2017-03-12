@@ -1,5 +1,19 @@
 export default [
   {
+    name: 'Undecided vs Trilliax Mythic ',
+    url: 'https://www.youtube.com/watch?v=sHgnlZAmIS0',
+    description: '',
+    date: '2017-03-10',
+    youTubeId: 'sHgnlZAmIS0',
+  },
+  {
+    name: 'Undecided vs Chronomatic Anomaly Mythic',
+    url: 'https://www.youtube.com/watch?v=lZaE_pF8-0c',
+    description: '',
+    date: '2017-02-26',
+    youTubeId: 'lZaE_pF8-0c',
+  },
+  {
     name: 'Undecided vs Skorpyron Mythic',
     url: 'https://www.youtube.com/watch?v=hDjyDcyyGxc',
     description: '',
@@ -40,12 +54,5 @@ export default [
     description: '',
     date: '',
     youTubeId: 'V_xcAz5AQek',
-  },
-  {
-    name: 'test1',
-    url: 'testurl1',
-    description: 'desc1',
-    date: '2016',
-    youTubeId: 'Q-HHa_8KvZw',
   },
 ];
