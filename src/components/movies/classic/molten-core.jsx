@@ -6,7 +6,7 @@ export const MoltenCore = () => (
   <div className="wow-movies">
 
     <Row xs >
-      <Col xs>
+      <Col xs className="entry__col">
         <h3 className="entry__text">
           Molten Core
         </h3>

@@ -19,6 +19,12 @@ export const WoWMovies = ({ children, routing }) => {
           </Col>
         </Row>
 
+
+    <Row xs>
+      <Col xs={6} sm={9} md={9} lg={9} className="entry__col">
+
+
+
         <Row xs>
           <Col xs={12} sm={12} md={12} lg={6} className="entry__col">
             <h3 className="entry__text entry__text--shorter">
@@ -28,7 +34,7 @@ export const WoWMovies = ({ children, routing }) => {
         </Row>
 
         <Row xs>
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/molten-core">
                 <img src="../../images/wow/classic/molten-core.jpg" className="cover" alt="molten-core" />
@@ -37,7 +43,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/onyxias-lair">
                 <img src="../../images/wow/classic/onyxias-lair.jpg" className="cover" alt="onyxias-lair" />
@@ -46,7 +52,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/zulgurub">
                 <img src="../../images/wow/classic/zulgurub.jpg" className="cover" alt="zulgurub" />
@@ -55,7 +61,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/blackwing-lair">
                 <img src="../../images/wow/classic/blackwing-lair.jpg" className="cover" alt="blackwing-lair" />
@@ -64,7 +70,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/ruins-of-ahnqiraj">
                 <img src="../../images/wow/classic/ruins-of-ahnqiraj.jpg" className="cover" alt="ruins-of-ahnqiraj" />
@@ -73,7 +79,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/ahnqiraj-temple">
                 <img src="../../images/wow/classic/ahnqiraj-temple.jpg" className="cover" alt="ahnqiraj-temple" />
@@ -82,7 +88,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/classic/classic">
                 <img src="../../images/wow/classic/classic.jpg" className="cover" alt="classic" />
@@ -91,17 +97,6 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
         </Row>
-
-        <div className="movie-listing">
-          <ReactCSSTransitionGroup
-            transitionName="anim"
-            transitionEnterTimeout={300} transitionLeaveTimeout={300}
-          >
-            {path === 'classic' && subPath === 'molten-core' ? children : null}
-            {path === 'classic' && subPath === 'onyxias-lair' ? children : null}
-          </ReactCSSTransitionGroup>
-        </div>
-
 
         <Row xs>
           <Col xs={12} sm={12} md={12} lg={6} className="entry__col">
@@ -112,7 +107,7 @@ export const WoWMovies = ({ children, routing }) => {
         </Row>
 
         <Row xs>
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/karazhan">
                 <img src="../../images/wow/burning-crusade/karazhan.jpg" className="cover" alt="molten-core" />
@@ -121,7 +116,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/serpentshrine-cavern">
                 <img src="../../images/wow/burning-crusade/serpentshrine-cavern.jpg" className="cover" alt="molten-core" />
@@ -130,7 +125,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/tempest-keep">
                 <img src="../../images/wow/burning-crusade/tempest-keep.jpg" className="cover" alt="molten-core" />
@@ -139,7 +134,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/black-temple">
                 <img src="../../images/wow/burning-crusade/black-temple.jpg" className="cover" alt="molten-core" />
@@ -148,7 +143,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/mount-hyjal">
                 <img src="../../images/wow/burning-crusade/mount-hyjal.jpg" className="cover" alt="molten-core" />
@@ -157,7 +152,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/sunwell">
                 <img src="../../images/wow/burning-crusade/the-sunwell.jpg" className="cover" alt="molten-core" />
@@ -166,7 +161,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/burning-crusade">
                 <img src="../../images/wow/burning-crusade/gruuls-lair.jpg" className="cover" alt="molten-core" />
@@ -185,7 +180,7 @@ export const WoWMovies = ({ children, routing }) => {
         </Row>
 
         <Row xs>
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/ulduar">
                 <img src="../../images/wow/wrath-of-the-lich-king/ulduar.jpg" className="cover" alt="molten-core" />
@@ -194,7 +189,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/serpentshrine-cavern">
                 <img src="../../images/wow/wrath-of-the-lich-king/trial-of-the-crusader.jpg" className="cover" alt="molten-core" />
@@ -203,7 +198,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/tempest-keep">
                 <img src="../../images/wow/wrath-of-the-lich-king/icecrown-citadel.jpg" className="cover" alt="molten-core" />
@@ -212,7 +207,7 @@ export const WoWMovies = ({ children, routing }) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={4} md={2} className="entry__col">
+          <Col xs={12} sm={6} md={3} className="entry__col">
             <div className="player__box player__col">
               <Link to="/movies/wow-movies/black-temple">
                 <img src="../../images/wow/wrath-of-the-lich-king/the-obsidian-sanctum.jpg" className="cover" alt="molten-core" />
@@ -222,7 +217,9 @@ export const WoWMovies = ({ children, routing }) => {
           </Col>
         </Row>
 
+      </Col>
 
+      <Col xs={6} sm={3} md={3} lg={3} className="entry__col">
         <div className="movie-listing">
           <ReactCSSTransitionGroup
             component="div" transitionName="movie-listing"
@@ -231,6 +228,10 @@ export const WoWMovies = ({ children, routing }) => {
             {children}
           </ReactCSSTransitionGroup>
         </div>
+      </Col>
+    </Row>
+
+
       </Grid>
     </div>
   );
