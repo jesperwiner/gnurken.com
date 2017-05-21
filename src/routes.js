@@ -40,9 +40,9 @@ export default function Routes({ store }) {
     <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/about/about" component={About} />
         <Route path="/about/rig" component={Rig} />
-        <Route path="/projects" component={Recent} />
+        <Route path="/projects/recent" component={Recent} />
         <Route path="/projects/amiga1200" component={Amiga1200} />
         <Route path="/projects/other" component={OtherProjects} />
         <Route path="/movies/wow-movies" component={MoviesContainer}>

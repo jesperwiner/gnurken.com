@@ -5,6 +5,8 @@ import './menu.scss';
 
 const Menu = ({ routing }) => {
   const path = routing.locationBeforeTransitions.pathname.split('/')[1];
+
+  console.log(path);
   const handleClick = () => {
     window.location.assign('https://undecided.gnurken.com');
   };
@@ -23,8 +25,8 @@ const Menu = ({ routing }) => {
             <NavItem>Home</NavItem>
           </IndexLinkContainer>
           <NavDropdown id={1} eventKey={'/about'} title="About">
-            <LinkContainer to="/about">
-              <MenuItem eventKey={'/about'}>Contact</MenuItem>
+            <LinkContainer to="/about/about">
+              <MenuItem eventKey={'/about/about'}>Contact</MenuItem>
             </LinkContainer>
             <LinkContainer to="/about/rig">
               <MenuItem eventKey={'/about/rig'}>Gaming Rig</MenuItem>
@@ -32,8 +34,8 @@ const Menu = ({ routing }) => {
           </NavDropdown>
 
           <NavDropdown id={2} eventKey={'/projects'} title="Projects">
-            <LinkContainer to="/projects">
-              <MenuItem eventKey={'/projects'}>Recent</MenuItem>
+            <LinkContainer to="/projects/recent">
+              <MenuItem eventKey={'/projects/recent'}>Recent</MenuItem>
             </LinkContainer>
             <LinkContainer to="/projects/amiga1200">
               <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200</MenuItem>

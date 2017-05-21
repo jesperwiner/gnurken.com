@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
 import './recent.scss';
 
 export const Recent = () => (
@@ -16,12 +17,12 @@ export const Recent = () => (
 
       <Row xs className="recent__row">
         <Col xs className="entry__col">
-          <LinkContainer to="/projects/amiga1200">
+          <Link to="/projects/amiga1200">
             <div className="recent__rowimage">
               <img src="../../images/amiga1200/amiga_0.png" className="cover" alt="Amiga" />
               <h4>Amiga 1200 Classic WB / WHDLoad and upgrade project</h4>
             </div>
-          </LinkContainer>
+          </Link>
         </Col>
       </Row>
 
