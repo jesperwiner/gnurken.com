@@ -16,7 +16,7 @@ export const Recent = () => (
       </Row>
 
       <Row xs className="recent__row">
-        <Col xs className="entry__col">
+        <Col  xs={12} sm={12} md={12} lg={6} className="entry__col first_col">
           <Link to="/projects/amiga1200">
             <div className="recent__rowimage">
               <img src="../../images/amiga1200/amiga_0.png" className="cover" alt="Amiga" />
@@ -24,7 +24,21 @@ export const Recent = () => (
             </div>
           </Link>
         </Col>
+        <Col  xs={12} sm={12} md={12} lg={6} className="entry__col second_col">
+          <Link to="/projects/xbox">
+            <div className="recent__rowimage">
+              <img src="../../images/xbox/Xbox_logo_2.png" className="xbox__logo" alt="xbox" />
+              <h4>Original Xbox renovation</h4>
+            </div>
+          </Link>
+        </Col>
       </Row>
+
+      <Row xs className="recent__row">
+
+      </Row>
+
+
 
       <Row xs >
         <Col xs>

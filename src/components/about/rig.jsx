@@ -1,11 +1,17 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import './rig.scss';
+import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 export const Rig = () => (
   <div className="about">
     <Grid fluid className="main-grid">
       <Row xs>
+
+
+
+
         <Col xs={12} sm={12} md={12} lg={6} className="entry__col">
           <h3 className="entry__text entry__text--shorter">
             The gaming rig
@@ -28,6 +34,18 @@ export const Rig = () => (
       </Row>
 
       <Row xs>
+        <Carousel showArrows={true}>
+          <div>
+              <img src="../../images/overkill/dator-1.JPG" />
+              <p className="legend">Legend 1</p>
+          </div>
+          <div>
+              <img src="../../images/overkill/001.JPG" />
+              <p className="legend">Legend 2</p>
+          </div>
+
+      </Carousel>
+
         <Col xs className="entry__col">
           <h3 className="entry__text entry__text--shorter">
             Current specs

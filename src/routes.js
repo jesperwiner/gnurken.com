@@ -7,6 +7,7 @@ import { About } from './components/about/about';
 import { Rig } from './components/about/rig';
 import { Recent } from './components/projects/recent';
 import { Amiga1200 } from './components/projects/amiga1200';
+import { Xbox } from './components/projects/xbox';
 import { OtherProjects } from './components/projects/other';
 
 import MoviesContainer from './containers/movies-container';
@@ -44,6 +45,7 @@ export default function Routes({ store }) {
         <Route path="/about/rig" component={Rig} />
         <Route path="/projects/recent" component={Recent} />
         <Route path="/projects/amiga1200" component={Amiga1200} />
+        <Route path="/projects/xbox" component={Xbox} />
         <Route path="/projects/other" component={OtherProjects} />
         <Route path="/movies/wow-movies" component={MoviesContainer}>
           <Route path="/movies/wow-movies/classic/molten-core" component={MoltenCore} />

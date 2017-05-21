@@ -1,6 +1,34 @@
 export default [
   {
-    name: 'Undecided vs Trilliax Mythic ',
+    name: 'Undecided vs Tichondrius Mythic',
+    url: 'https://www.youtube.com/watch?v=SCzoi6ucRQ8',
+    description: '',
+    date: '2017-05-17',
+    youTubeId: 'SCzoi6ucRQ8',
+  },
+  {
+    name: 'Undecided vs High Botanist Tel\'arn Mythic',
+    url: 'https://www.youtube.com/watch?v=1J26YcOgWrA',
+    description: '',
+    date: '2017-05-14',
+    youTubeId: '1J26YcOgWrA',
+  },
+  {
+    name: 'Undecided vs Krosus Mythic ',
+    url: 'https://www.youtube.com/watch?v=NqEjGIqQiDc',
+    description: '',
+    date: '2017-05-07',
+    youTubeId: 'NqEjGIqQiDc',
+  },
+  {
+    name: 'Undecided vs Spellblade Aluriel Mythic',
+    url: 'https://www.youtube.com/watch?v=xgd9lAZgJqM',
+    description: '',
+    date: '2017-04-14',
+    youTubeId: 'xgd9lAZgJqM',
+  },
+  {
+    name: 'Undecided vs Trilliax Mythic',
     url: 'https://www.youtube.com/watch?v=sHgnlZAmIS0',
     description: '',
     date: '2017-03-10',

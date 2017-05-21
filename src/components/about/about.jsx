@@ -94,25 +94,43 @@ export const About = () => (
       </Row>
 
       <Row xs>
-        <Col xs={12} sm={6} md={4} lg={3} className="entry__col">
-          <a href="https://www.linkedin.com/in/jesper-win%C3%A9r-4b6a7981/">
-            <div className="player__box player__col">
-              <img src="../../images/jesper.png" className="cover" alt="Jesper" />
-              <h4>Linked-In</h4>
-            </div>
-          </a>
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3} className="entry__col">
-          <div className="player__box player__col">
-            <img src="../../images/jesper.png" className="cover" alt="Jesper" />
-            <h4>Linked-In</h4>
-          </div>
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3} className="entry__col">
-          <div className="player__box player__col">
-            <img src="../../images/jesper.png" className="cover" alt="Jesper" />
-            <h4>Linked-In</h4>
-          </div>
+        <Col xs={12} sm={12} md={6} lg={6} className="entry__col">
+
+          <Row xs xsBottom>
+            <Col xs={12} sm={6} className="entry__col">
+              <a href="https://www.linkedin.com/in/jesper-win%C3%A9r-4b6a7981/">
+                <div className="player__box player__col">
+                  <img src="../../images/jesper.png" className="cover" alt="Jesper" />
+                  <h4>Linked-In</h4>
+                </div>
+              </a>
+            </Col>
+            <Col xs={12} sm={6} className="entry__col">
+              <a href="https://www.facebook.com/jesper.winer">
+                <div className="player__box player__col">
+                  <img src="../../images/facebook.png" className="cover" alt="Jesper" />
+                  <h4>Facebook</h4>
+                </div>
+              </a>
+            </Col>
+          </Row>
+          <Row xs xsBottom>
+            <Col xs={12} sm={6} className="entry__col">
+              <div className="player__box player__col">
+                <img src="../../images/contact.jpg" className="cover" alt="Jesper" />
+                <h4>Contact</h4>
+              </div>
+            </Col>
+            <Col xs={12} sm={6} className="entry__col">
+              <div className="player__box player__col">
+                <a href="https://twitter.com/JesperWiner?lang=en">
+                  <img src="../../images/twitter.png" className="cover" alt="Jesper" />
+                  <h4>Twitter</h4>
+                </a>
+              </div>
+            </Col>
+          </Row>
+
         </Col>
       </Row>
 

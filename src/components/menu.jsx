@@ -40,6 +40,9 @@ const Menu = ({ routing }) => {
             <LinkContainer to="/projects/amiga1200">
               <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200</MenuItem>
             </LinkContainer>
+            <LinkContainer to="/projects/xbox">
+              <MenuItem eventKey={'/projects/xbox'}>Original Xbox</MenuItem>
+            </LinkContainer>
             <LinkContainer to="/projects/other">
               <MenuItem eventKey={'/projects/other'}>Other projects</MenuItem>
             </LinkContainer>
