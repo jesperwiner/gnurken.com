@@ -7,7 +7,7 @@ export const Sunwell = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           The Sunwell
         </h3>
       </Col>

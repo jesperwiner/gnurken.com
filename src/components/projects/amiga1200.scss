@@ -1,5 +1,14 @@
 .amiga1200 {
 
+  .normal-text {
+    margin-top: 0;
+    margin-right: 3rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #cdcdcd;
+    font-size: 16px;
+  }
+  
   &__image {
     img {
       margin-top: .5rem;

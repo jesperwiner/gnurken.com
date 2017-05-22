@@ -7,7 +7,7 @@ export const TempestKeep = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Tempest Keep
         </h3>
       </Col>

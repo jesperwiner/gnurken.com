@@ -7,7 +7,7 @@ export const MoltenCore = () => (
 
     <Row xs >
       <Col xs className="entry__col">
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Molten Core
         </h3>
       </Col>

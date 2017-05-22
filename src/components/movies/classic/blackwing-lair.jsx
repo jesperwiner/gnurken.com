@@ -7,7 +7,7 @@ export const BlackwingLair = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Blackwing Lair
         </h3>
       </Col>

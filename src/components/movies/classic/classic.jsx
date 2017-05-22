@@ -6,7 +6,7 @@ export const Classic = () => (
   <div className="wow-movies">
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Other
         </h3>
       </Col>

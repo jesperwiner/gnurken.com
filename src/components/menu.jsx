@@ -38,7 +38,10 @@ const Menu = ({ routing }) => {
               <MenuItem eventKey={'/projects/recent'}>Recent</MenuItem>
             </LinkContainer>
             <LinkContainer to="/projects/amiga1200">
-              <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200</MenuItem>
+              <MenuItem eventKey={'/projects/amiga1200'}>Amiga 1200 Upgrade</MenuItem>
+            </LinkContainer>
+            <LinkContainer to="/projects/amiga1200-2">
+              <MenuItem eventKey={'/projects/amiga1200-2'}>Amiga 1200 Renovation</MenuItem>
             </LinkContainer>
             <LinkContainer to="/projects/xbox">
               <MenuItem eventKey={'/projects/xbox'}>Original Xbox</MenuItem>
@@ -52,8 +55,8 @@ const Menu = ({ routing }) => {
             <LinkContainer to="/movies/wow-movies">
               <MenuItem eventKey={'/movies/wow-movies'}>World of Warcraft</MenuItem>
             </LinkContainer>
-            <LinkContainer to="/movies/other">
-              <MenuItem eventKey={'/movies/other'}>Other Movies</MenuItem>
+            <LinkContainer to="/movies/other-movies">
+              <MenuItem eventKey={'/movies/other-movies'}>Other Movies</MenuItem>
             </LinkContainer>
           </NavDropdown>
           <NavItem onClick={handleClick}>The Undecided</NavItem>

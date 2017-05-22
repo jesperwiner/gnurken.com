@@ -7,7 +7,7 @@ export const ZulGurub = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Zul'Gurub
         </h3>
       </Col>

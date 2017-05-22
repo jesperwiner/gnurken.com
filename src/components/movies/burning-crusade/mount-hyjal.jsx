@@ -7,7 +7,7 @@ export const MountHyjal = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           The Battle for Mount Hyjal
         </h3>
       </Col>

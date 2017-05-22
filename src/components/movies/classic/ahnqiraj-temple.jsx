@@ -7,7 +7,7 @@ export const AhnqirajTemple = () => (
 
     <Row xs >
       <Col xs>
-        <h3 className="entry__text">
+        <h3 className="entry__text2">
           Ahnqiraj Temple
         </h3>
       </Col>

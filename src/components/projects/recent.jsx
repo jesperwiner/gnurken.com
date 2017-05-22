@@ -35,6 +35,19 @@ export const Recent = () => (
       </Row>
 
       <Row xs className="recent__row">
+        <Col  xs={12} sm={12} md={12} lg={6} className="entry__col first_col">
+          <Link to="/projects/amiga1200-2">
+            <div className="recent__rowimage">
+              <img src="../../images/amiga1200-2/0.jpg" className="cover" alt="Amiga" />
+              <h4>Another Amiga 1200 Renovation</h4>
+            </div>
+          </Link>
+        </Col>
+        <Col  xs={12} sm={12} md={12} lg={6} className="entry__col second_col">
+        </Col>
+      </Row>
+
+      <Row xs className="recent__row">
 
       </Row>
 
