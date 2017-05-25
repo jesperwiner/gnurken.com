@@ -1,61 +1,115 @@
-@media all and (min-width: 62em) {
-  .grid__col--md-2 {
-    flex-basis: 14.267%;
+@media all and (min-width: 75em) {
+  .11grid__row {
+    margin-left: 0;
+  }
+  .11rightColumn {
+    padding-left: 2rem;
   }
 }
 
-.entry {
-  background-color: #111;
+.movieColumn {
 
-  .col--right {
-    text-align: right;
+}
 
-    h3 {
-      padding-right: 0.8rem;
-    }
+.categoryLink {
+  margin-bottom: 1rem;
+
+  border: 1px solid black;
+
+  &:hover {
+    border: 1px solid hsla(210, 100%, 75%, 1.0);
   }
 
-  &__text2 {
-    background-color: #730b0b;
-    margin: 0.7rem 0 1rem -0.8rem;
-    padding: 0.3rem 6.7rem 0.5rem 1.5rem;
-    font-size: 1.6rem;
-    width: 35rem;
+  .cover {
+    object-fit: cover;
+    width: 100%;
+  }
 
-    &--shorter {
-      width: 22rem;
-    }
+  h4 {
+    margin: 0rem;
+    color: #CCC;
+    background-color: #373737;
+    padding: 0.5rem;
   }
 }
+
+
+.switch-enter {
+    opacity: 0.01;
+}
+.switch-enter.switch-enter-active {
+    opacity: 1.0;
+    transition: opacity 100ms ease-in;
+}
+.switch-leave {
+    opacity: 1.0;
+}
+.switch-leave.switch-leave-active {
+    opacity: 0;
+    transition: opacity 100ms ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  .movie-listing {
+
+  }
+
+  .movie-listing-enter {
+    opacity: 0.01;
+  }
+
+  .movie-listing-enter.movie-listing-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+    transition-delay: 1s;
+  }
+
+  .movie-listing-leave {
+    opacity: 1;
+  }
+
+  .movie-listing-leave.movie-listing-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+
+
+
 
 
 
 .wow-movies {
-
   a {
+    border-top: 0px;
     text-decoration: none;
+    font-family: monospace;
 
-    img {
-      border: 1px solid black;
-    }
 
     h4 {
-      border: 1px solid black;
-      border-top: 0px;
+      font-size: 12px;
+      border-top: 1px solid black;
     }
-  }
-
-  a:hover img {
-    border: 1px solid red;
   }
 
   a:hover h4{
-    color: red;
+    color: hsla(210, 100%, 75%, 1.0);
   }
 
 
   .movie-listing {
     overflow: hidden;
+    margin-top: 1rem;
   }
 
 
@@ -70,27 +124,6 @@
       opacity: 1;
   }
 
-
-
-  .movie-listing-enter {
-    opacity: 0.01;
-  }
-
-  .movie-listing-enter.movie-listing-enter-active {
-    opacity: 1;
-    transition: max-height 500ms ease-in;
-  }
-
-  .movie-listing-leave {
-    max-height: 0;
-    opacity: 1;
-  }
-
-  .movie-listing-leave.movie-listing-leave-active {
-    opacity: 0.01;
-    max-height: 0;
-    transition: max-height 500ms ease-out;
-  }
 
   .cover {
     height: 110px;

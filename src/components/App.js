@@ -4,6 +4,7 @@ import MenuContainer from '../containers/menu-container';
 import { StickyContainer, Sticky } from 'react-sticky';
 import 'react-bem-grid/dist/Grid.css';
 import './app.scss';
+import './common.scss';
 
 const App = ({ children, location: { pathname } }) => {
   // Only take the first-level part of the path as key, instead of the whole path.
