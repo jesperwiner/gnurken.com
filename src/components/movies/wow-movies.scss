@@ -50,12 +50,85 @@
 }
 
 
+.watchButton {
+  background-color: transparent;
+  background-image: url( '../../images/watch.png' );
+  background-size: 39px 28px;
+  background-repeat: no-repeat;
+  background-position: 3px 4px;
+  height: 3.4rem;
+  width: 4.3rem;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
 
+.downloadButton {
+  background-image: url( '../../images/download.png' );
+  background-size: 29px 26px;
+  background-repeat: no-repeat;
+  background-position: 3px 4px;
+  background-color: white;
+  height: 3.4rem;
+  width: 3.6rem;
 
+  border: 0;
+  box-shadow:none;
+  border-radius: 0px;
+}
 
+.tableMovies {
+  width: 98%;
+  font-size: 16px;
+  font-family: monospace;
+  margin-top: 1rem;
+}
 
+.tableHeader {
+  font-size: 16px;
+  font-family: monospace;
+  background-color: #001f3f;
+  color: hsla(210, 100%, 75%, 1.0);
+  padding: 0.5rem 0 0.4rem 1.4rem;
+  margin-bottom: 1rem;
 
+  th {
+    padding: 1rem;
+  }
+}
 
+.tableRow {
+  background-color: #373737;
+  color: #ededed;
+  width: 100%;
+  border-bottom: 2px solid #111111;
+
+  &:hover {
+    color: #80a3c1;
+  }
+}
+
+.tableCell {
+  cursor: pointer;
+  width: 93%;
+  padding-left: 10px;
+
+  &--download {
+    width: 5%;
+    border: 1px solid #373737;
+    border-right: 2px solid transparent;
+  }
+
+  &--watch {
+    width: 5%;
+
+  }
+
+  &--size {
+    padding-right: 1rem;
+  }
+
+}
 
 
 
@@ -109,7 +182,6 @@
 
   .movie-listing {
     overflow: hidden;
-    margin-top: 1rem;
   }
 
 

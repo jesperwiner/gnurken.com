@@ -1,60 +1,71 @@
 import React from 'react';
 import { Row, Col } from 'react-bem-grid';
-import './other.scss';
 
-export const Classic = () => (
-  <div className="wow-movies">
+const Classic = React.createClass({
+	componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	},
+	render()  {
+		return (
+      <Row xs >
+        <Col xs>
+          <table className="tableMovies">
+            <thead className="tableHeader"><tr><th colSpan={4}>Classic</th></tr></thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Argent Dawn vs. Emeriss - Soulja lead PUG.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Argent Dawn vs. Emeriss - Soulja lead PUG.mp4')}>Argent Dawn vs. Emeriss - Soulja lead PUG</td>
+                <td className="tableCell--size">225MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Argent Dawn vs. Emeriss - Soulja lead PUG.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man.mp4')}>Axis vs. Drakkisath - 5 man</td>
+                <td className="tableCell--size">125MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.mp4')}>Axis vs. Drakkisath - 5 man with Teamspeak</td>
+                <td className="tableCell--size">125MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.mp4')}>Axis vs. Kazzak</td>
+                <td className="tableCell--size">138MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Taerar.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Taerar.mp4')}>Axis vs. Taerar</td>
+                <td className="tableCell--size">304MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Taerar.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 1.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 1.mp4')}>Axis vs. Thunderaan - Egbert kill 1</td>
+                <td className="tableCell--size">78MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 1.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 2.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 2.mp4')}>Axis vs. Thunderaan - Egbert kill 2</td>
+                <td className="tableCell--size">88MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 2.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Gnurken.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Gnurken.mp4')}>Axis vs. Thunderaan - Gnurken</td>
+                <td className="tableCell--size">64MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Gnurken.avi"><button className="downloadButton" /></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
+		)
+	}
+});
 
-    <h3 className="entry__text2">
-      Other
-    </h3>
-
-    <Row xs >
-      <Col xs>
-        <ul className="movies-list" id="double">
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Argent Dawn vs. Emeriss - Soulja lead PUG.avi">
-              Argent Dawn vs. Emeriss - Soulja lead PUG (225MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.avi">
-              Axis vs. Drakkisath - 5 man with Teamspeak (125MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man.avi">
-              Axis vs. Drakkisath - 5 man.avi (125MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.avi">
-              Axis vs. Kazzak (138MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Taerar.avi">
-              Axis vs. Taerar (304MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 1.avi">
-              Axis vs. Thunderaan - Egbert kill 1 (78MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Egbert kill 2.avi">
-              Axis vs. Thunderaan - Egbert kill 2 (89MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Thunderaan - Gnurken.avi">
-              Axis vs. Thunderaan - Gnurken (64MB)
-            </a>
-          </li>
-        </ul>
-      </Col>
-    </Row>
-
-  </div>
-);
+export default Classic;
