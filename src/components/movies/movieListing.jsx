@@ -195,10 +195,10 @@ var MovieListing = React.createClass({
     return (
       <div>
         <Row xs>
-          <Col xs className="movieColumn">
+          <Col xs className="moviePlayer">
             <ReactPlayer
               url={this.props.movie.url}
-              width={'98%'}
+              width={'100%'}
               height={'417'}
               controls
             />

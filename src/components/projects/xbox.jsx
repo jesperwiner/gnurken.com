@@ -42,7 +42,7 @@ export const Xbox = () => (
       </Row>
 
       <Row xs>
-        <Carousel showArrows={true} autoPlay={true}>
+        <Carousel showArrows autoPlay infiniteLoop stopOnHover={false} interval={10000}>
           <div>
               <img src="../../images/xbox/1.jpg" />
               <p className="legend">Removed DVD and harddrive, that small fan on the GPU had bad bearings and was really noisy.</p>

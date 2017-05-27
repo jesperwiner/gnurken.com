@@ -33,7 +33,7 @@ export const Amiga1200 = () => (
       </Row>
 
       <Row xs>
-        <Carousel showArrows={true} autoPlay={true}>
+        <Carousel showArrows autoPlay infiniteLoop stopOnHover={false} interval={10000}>
           <div>
               <img src="../../images/amiga1200/amiga_1.jpg" />
               <p className="legend">Nice and white Amiga 1200.</p>

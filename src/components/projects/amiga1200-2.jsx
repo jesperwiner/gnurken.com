@@ -36,7 +36,7 @@ export const Amiga1200_2 = () => (
 
       <Row xs>
         <Col xs className="entry__col">
-        <Carousel showArrows={true} autoPlay={true}>
+        <Carousel showArrows autoPlay infiniteLoop stopOnHover={false} interval={10000}>
           <div>
               <img src="../../images/amiga1200-2/1.jpg" />
               <p className="legend">Board mounted in new case.</p>
