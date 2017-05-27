@@ -2,14 +2,12 @@ import React, { PropTypes } from 'react';
 import { Grid, Row, Col } from 'react-bem-grid';
 import { Link } from 'react-router';
 import ReactPlayer from 'react-player';
-import './wow-movies.scss';
 import MovieListing from './movieListing';
+import './wow-movies.scss';
 
 export const WoWMovies = ({ children, routing, movie, showMovie }) => {
   const path = routing.locationBeforeTransitions.pathname.split('/')[3];
   const subPath = routing.locationBeforeTransitions.pathname.split('/')[4];
-
-
 
   return (
     <div className="wow-movies">
@@ -18,11 +16,8 @@ export const WoWMovies = ({ children, routing, movie, showMovie }) => {
           World of Warcraft Movies
         </Row>
 
-
         <Row xs>
           <Col xs={12} sm={12} md={12} lg={6} className="movieColumn">
-
-
             <div className="movie-listing">
               <MovieListing path={subPath} movie={movie} showMovie={showMovie} />
             </div>
@@ -158,8 +153,8 @@ export const WoWMovies = ({ children, routing, movie, showMovie }) => {
               {/******************************************************/}
               <Col xs={6} sm={3} md={3} lg={4} className="movieColumn">
                 <div className="categoryLink">
-                  <Link to="/movies/wow-movies/wrath-of-the-lich-king/the-obsidian-sanctum">
-                    <img src="../../images/wow/wrath-of-the-lich-king/the-obsidian-sanctum.jpg" className="cover" alt="the-obsidian-sanctum" />
+                  <Link to="/movies/wow-movies/wrath-of-the-lich-king/wrath-of-the-lich-king">
+                    <img src="../../images/wow/wrath-of-the-lich-king/wrath-of-the-lich-king.jpg" className="cover" alt="wrath-of-the-lich-king" />
                     <h4>Wrath Of The Lich King</h4>
                   </Link>
                 </div>
@@ -242,20 +237,25 @@ export const WoWMovies = ({ children, routing, movie, showMovie }) => {
                   </Link>
                 </div>
               </Col>
-
             </Row>
-
-
           </Col>
-        </Row>
 
+        </Row>
       </Grid>
     </div>
   );
 }
 
+
+WoWMovies.defaultProps = {
+  movie: {
+    url: 'http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.mp4',
+  }
+};
+
 WoWMovies.propTypes = {
   children: PropTypes.node,
+  movie: PropTypes.object,
 };
 
 export default WoWMovies;

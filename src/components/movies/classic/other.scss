@@ -1,2 +1,13 @@
 .other {
 }
+
+/*
+
+<tr className="tableRow">
+  <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/molten-core/AAA.mp4')} /></td>
+  <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/molten-core/AAA.mp4')}>AAA</td>
+  <td className="tableCell--size">225MB</td>
+  <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/molten-core/AAA.avi"><button className="downloadButton" /></a></td>
+</tr>
+
+*/

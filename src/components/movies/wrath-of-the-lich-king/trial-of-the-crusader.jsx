@@ -1,33 +1,35 @@
 import React from 'react';
 import { Row, Col } from 'react-bem-grid';
-import './other.scss';
 
-export const TrialOfTheCrusader = () => (
-  <div className="wow-movies">
+const TrialOfTheCrusader = React.createClass({
+	componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	},
+	render()  {
+		return (
+      <Row xs >
+        <Col xs>
+          <table className="tableMovies">
+            <thead className="tableHeader"><tr><th colSpan={4}>Trial Of The Crusader</th></tr></thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Illumination vs. NorthrendBeasts(Heroic).mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Illumination vs. NorthrendBeasts(Heroic).mp4')}>Illumination vs. NorthrendBeasts(Heroic)</td>
+                <td className="tableCell--size">504MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Illumination vs. NorthrendBeasts(Heroic).wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Sallskapsraiden Tribute to Insanity.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Sallskapsraiden Tribute to Insanity.mp4')}>Sällskapsraiden Tribute to Insanity</td>
+                <td className="tableCell--size">690MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Sallskapsraiden Tribute to Insanity.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
+		)
+	}
+});
 
-    <Row xs >
-      <Col xs>
-        <h3 className="entry__text2">
-          Trial Of The Crusader
-        </h3>
-      </Col>
-    </Row>
-    <Row xs >
-      <Col xs>
-        <ul className="movies-list" id="double">
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Illumination vs. NorthrendBeasts(Heroic).wmv">
-              Illumination vs. NorthrendBeasts(Heroic) (504MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader/Sallskapsraiden Tribute to Insanity.wmv">
-              Sallskapsraiden Tribute to Insanity (690MB)
-            </a>
-          </li>
-        </ul>
-      </Col>
-    </Row>
-
-  </div>
-);
+export default TrialOfTheCrusader;

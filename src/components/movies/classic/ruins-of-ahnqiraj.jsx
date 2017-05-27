@@ -1,33 +1,35 @@
 import React from 'react';
 import { Row, Col } from 'react-bem-grid';
-import './other.scss';
 
-export const RuinsOfAhnqiraj = () => (
-  <div className="wow-movies">
-    <Row xs >
-      <Col xs>
-        <h3 className="entry__text2">
-          Ruins of Ahnqiraj
-        </h3>
-      </Col>
-    </Row>
+const RuinsOfAhnqiraj = React.createClass({
+	componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	},
+	render()  {
+		return (
+      <Row xs >
+        <Col xs>
+          <table className="tableMovies">
+            <thead className="tableHeader"><tr><th colSpan={4}>Ruins of Ahnqiraj</th></tr></thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ayamiss - 2006-05-02.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ayamiss - 2006-05-02.mp4')}>Axis vs. Ayamiss - 2006-05-02</td>
+                <td className="tableCell--size">189MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ayamiss - 2006-05-02.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ossirian - 2006-07-09.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ossirian - 2006-07-09.mp4')}>Axis vs. Ossirian - 2006-07-09</td>
+                <td className="tableCell--size">181MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ossirian - 2006-07-09.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
+		)
+	}
+});
 
-    <Row xs >
-      <Col xs>
-        <ul className="movies-list" id="double">
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ayamiss - 2006-05-02.avi">
-              Axis vs. Ayamiss - 2006-05-02 (189MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/classic/ruins-of-ahnqiraj/Axis vs. Ossirian - 2006-07-09.wmv">
-              Axis vs. Ossirian - 2006-07-09 (181MB)
-            </a>
-          </li>
-        </ul>
-      </Col>
-    </Row>
-
-  </div>
-);
+export default RuinsOfAhnqiraj;

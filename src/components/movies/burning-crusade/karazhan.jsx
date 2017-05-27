@@ -1,77 +1,89 @@
 import React from 'react';
 import { Row, Col } from 'react-bem-grid';
-import './other.scss';
 
-export const Karazhan = () => (
-  <div className="wow-movies">
+const Karazhan = React.createClass({
+	componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	},
+	render()  {
+		return (
+      <Row xs >
+        <Col xs>
+          <table className="tableMovies">
+            <thead className="tableHeader"><tr><th colSpan={4}>Karazhan</th></tr></thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/Echo vs. Netherspite.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/Echo vs. Netherspite.mp4')}>Echo vs. Netherspite</td>
+                <td className="tableCell--size">276MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/Echo vs. Netherspite.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Chess.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Chess.mp4')}>GeeksRus vs. Chess</td>
+                <td className="tableCell--size">265MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Chess.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Huntsman.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Huntsman.mp4')}>GeeksRus vs. Huntsman</td>
+                <td className="tableCell--size">132MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Huntsman.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Illhoof.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Illhoof.mp4')}>GeeksRus vs. Illhoof</td>
+                <td className="tableCell--size">379MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Illhoof.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Maiden.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Maiden.mp4')}>GeeksRus vs. Maiden</td>
+                <td className="tableCell--size">111MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Maiden.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Moroes.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Moroes.mp4')}>GeeksRus vs. Moroes</td>
+                <td className="tableCell--size">122MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Moroes.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Netherspite.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Netherspite.mp4')}>GeeksRus vs. Netherspite</td>
+                <td className="tableCell--size">454MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Netherspite.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Nightbane.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Nightbane.mp4')}>GeeksRus vs. Nightbane</td>
+                <td className="tableCell--size">765MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Nightbane.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. PrinceMalchezaar.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. PrinceMalchezaar.mp4')}>GeeksRus vs. PrinceMalchezaar</td>
+                <td className="tableCell--size">322MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. PrinceMalchezaar.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. ShadeOfAran.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. ShadeOfAran.mp4')}>GeeksRus vs. ShadeOfAran</td>
+                <td className="tableCell--size">146MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. ShadeOfAran.avi"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. WizardOfOz.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. WizardOfOz.mp4')}>GeeksRus vs. WizardOfOz</td>
+                <td className="tableCell--size">287MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. WizardOfOz.avi"><button className="downloadButton" /></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
+		)
+	}
+});
 
-    <Row xs >
-      <Col xs>
-        <h3 className="entry__text2">
-          Karazhan
-        </h3>
-      </Col>
-    </Row>
-    <Row xs >
-      <Col xs>
-        <ul className="movies-list" id="double">
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/Echo vs. Netherspite.avi">
-              Echo vs. Netherspite (276MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Chess.avi">
-              GeeksRus vs. Chess (265MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Huntsman.avi">
-              GeeksRus vs. Huntsman (132MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Illhoof.avi">
-              GeeksRus vs. Illhoof (379MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Maiden.avi">
-              GeeksRus vs. Maiden (111MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Moroes.avi">
-              GeeksRus vs. Moroes (122MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Netherspite.avi">
-              GeeksRus vs. Netherspite (454MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. Nightbane.avi">
-              GeeksRus vs. Nightbane (765MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. PrinceMalchezaar.avi">
-              GeeksRus vs. PrinceMalchezaar (332MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. ShadeOfAran.avi">
-              GeeksRus vs. ShadeOfAran (146MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/burning-crusade/karazhan/GeeksRus vs. WizardOfOz.avi">
-              GeeksRus vs. WizardOfOz (287MB)
-            </a>
-          </li>
-        </ul>
-      </Col>
-    </Row>
-  </div>
-);
+export default Karazhan;

@@ -30,9 +30,9 @@ const Classic = React.createClass({
                 <td className="tableCell--size">125MB</td>
                 <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Drakkisath - 5 man with Teamspeak.avi"><button className="downloadButton" /></a></td>
               </tr>
-              <tr className="tableRow">
-                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.mp4')} /></td>
-                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.mp4')}>Axis vs. Kazzak</td>
+              <tr className="tableRow--no-hover">
+                <td className="tableCell--watch"></td>
+                <td className="tableCell" >Axis vs. Kazzak</td>
                 <td className="tableCell--size">138MB</td>
                 <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/classic/Axis vs. Kazzak.avi"><button className="downloadButton" /></a></td>
               </tr>

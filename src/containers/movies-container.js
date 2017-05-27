@@ -3,13 +3,12 @@ import Movies from '../components/movies/wow-movies';
 import { bindActionCreators } from 'redux';
 import { showMovie } from '../actions/movieActions';
 
-const mapStateToProps = ({ routing, movie = {} }) => ({
+const mapStateToProps = ({ routing, movie }) => ({
   routing,
   movie,
 });
 
 function mapDispatchToProps(dispatch) {
-  console.log(showMovie);
   return bindActionCreators({
     showMovie
   }, dispatch);

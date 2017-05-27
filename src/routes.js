@@ -28,10 +28,10 @@ import { MountHyjal } from './components/movies/burning-crusade/mount-hyjal';
 import { Sunwell } from './components/movies/burning-crusade/sunwell';
 import { BurningCrusade } from './components/movies/burning-crusade/burning-crusade';
 
+import { WrathOfTheLichKing } from './components/movies/wrath-of-the-lich-king/wrath-of-the-lich-king';
 import { IcecrownCitadel } from './components/movies/wrath-of-the-lich-king/icecrown-citadel';
 import { TrialOfTheCrusader } from './components/movies/wrath-of-the-lich-king/trial-of-the-crusader';
 import { Ulduar } from './components/movies/wrath-of-the-lich-king/ulduar';
-import { TheObsidianSanctum } from './components/movies/wrath-of-the-lich-king/the-obsidian-sanctum';
 
 import { BlackrockFoundry } from './components/movies/warlords-of-draenor/blackrock-foundry';
 import { HellfireCitadel } from './components/movies/warlords-of-draenor/hellfire-citadel';
@@ -75,10 +75,10 @@ export default function Routes({ store }) {
           <Route path="/movies/wow-movies/burning-crusade/sunwell" component={Sunwell} />
           <Route path="/movies/wow-movies/burning-crusade/burning-crusade" component={BurningCrusade} />
 
+          <Route path="/movies/wow-movies/wrath-of-the-lich-king/wrath-of-the-lich-king" component={WrathOfTheLichKing} />
           <Route path="/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel" component={IcecrownCitadel} />
           <Route path="/movies/wow-movies/wrath-of-the-lich-king/trial-of-the-crusader" component={TrialOfTheCrusader} />
           <Route path="/movies/wow-movies/wrath-of-the-lich-king/ulduar" component={Ulduar} />
-          <Route path="/movies/wow-movies/wrath-of-the-lich-king/the-obsidian-sanctum" component={TheObsidianSanctum} />
 
           <Route path="/movies/wow-movies/warlords-of-draenor/blackrock-foundry" component={BlackrockFoundry} />
           <Route path="/movies/wow-movies/warlords-of-draenor/hellfire-citadel" component={HellfireCitadel} />

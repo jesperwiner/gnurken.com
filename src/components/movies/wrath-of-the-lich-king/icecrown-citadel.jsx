@@ -1,108 +1,131 @@
 import React from 'react';
 import { Row, Col } from 'react-bem-grid';
-import './other.scss';
 
-export const IcecrownCitadel = () => (
-  <div className="wow-movies">
+const IcecrownCitadel = React.createClass({
+	componentWillUnmount () {
+		this.props.handleTransitionEnd();
+	},
+	render()  {
+		return (
+      <Row xs >
+        <Col xs>
+          <table className="tableMovies">
+            <thead className="tableHeader"><tr><th colSpan={4}>Icecrown Citadel</th></tr></thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Princes Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Princes Heroic.mp4')}>Illumination vs. Blood Princes Heroic</td>
+                <td className="tableCell--size">375MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Princes Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Queen Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Queen Heroic.mp4')}>Illumination vs. Blood Queen Heroic</td>
+                <td className="tableCell--size">374MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Queen Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Deathbringer Saurfang Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Deathbringer Saurfang Heroic.mp4')}>Illumination vs. Deathbringer Saurfang Heroic</td>
+                <td className="tableCell--size">346MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Deathbringer Saurfang Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Gunship Battle Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Gunship Battle Heroic.mp4')}>Illumination vs. Gunship Battle Heroic</td>
+                <td className="tableCell--size">499MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Gunship Battle Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lady Deathwhisper Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lady Deathwhisper Heroic.mp4')}>Illumination vs. Lady Deathwhisper Heroic</td>
+                <td className="tableCell--size">520MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lady Deathwhisper Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lord Marrowgar Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lord Marrowgar Heroic.mp4')}>Illumination vs. Lord Marrowgar Heroic</td>
+                <td className="tableCell--size">562MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lord Marrowgar Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Professor Putricide Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Professor Putricide Heroic.mp4')}>Illumination vs. Professor Putricide Heroic</td>
+                <td className="tableCell--size">472MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Professor Putricide Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Rotface Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Rotface Heroic.mp4')}>Illumination vs. Rotface Heroic</td>
+                <td className="tableCell--size">376MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Rotface Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana\'thel Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana\'thel Heroic.mp4')}>Sallskapsraiden vs. Blood-Queen Lana'thel Heroic</td>
+                <td className="tableCell--size">172MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana\'thel Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood Princes Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood Princes Heroic.mp4')}>Sallskapsraiden vs. Blood Princes Heroic</td>
+                <td className="tableCell--size">446MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood Princes Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Deathbringer Saurfang.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Deathbringer Saurfang.mp4')}>Sallskapsraiden vs. Deathbringer Saurfang</td>
+                <td className="tableCell--size">258MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Deathbringer Saurfang.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Festergut Heroic HighBitrate.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Festergut Heroic HighBitrate.mp4')}>Sallskapsraiden vs. Festergut Heroic HighBitrate</td>
+                <td className="tableCell--size">1.05GB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Festergut Heroic HighBitrate.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Gunship Battle.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Gunship Battle.mp4')}>Sallskapsraiden vs. Gunship Battle</td>
+                <td className="tableCell--size">192MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Gunship Battle.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lady Deathwhisper Full House.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lady Deathwhisper Full House.mp4')}>Sallskapsraiden vs. Lady Deathwhisper Full House</td>
+                <td className="tableCell--size">81MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lady Deathwhisper Full House.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lord Marrowgar Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lord Marrowgar Heroic.mp4')}>Sallskapsraiden vs. Lord Marrowgar Heroic</td>
+                <td className="tableCell--size">375MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lord Marrowgar Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Professor Putricide.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Professor Putricide.mp4')}>Sallskapsraiden vs. Professor Putricide</td>
+                <td className="tableCell--size">220MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Professor Putricide.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Rotface.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Rotface.mp4')}>Sallskapsraiden vs. Rotface</td>
+                <td className="tableCell--size">173MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Rotface.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+              <tr className="tableRow">
+                <td className="tableCell--watch"><button className="watchButton" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Valithria Dreamwalker Heroic.mp4')} /></td>
+                <td className="tableCell" onClick={() => this.props.showMovie('http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Valithria Dreamwalker Heroic.mp4')}>Sallskapsraiden vs. Valithria Dreamwalker Heroic</td>
+                <td className="tableCell--size">307MB</td>
+                <td className="tableCell--download"><a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Valithria Dreamwalker Heroic.wmv"><button className="downloadButton" /></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
+		)
+	}
+});
 
-    <Row xs >
-      <Col xs>
-        <h3 className="entry__text2">
-          Icecrown Citadel
-        </h3>
-      </Col>
-    </Row>
-    <Row xs >
-      <Col xs>
-        <ul className="movies-list" id="double">
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Princes Heroic.wmv">
-              Illumination vs. Blood Princes Heroic (375MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Blood Queen Heroic.wmv">
-              Illumination vs. Blood Queen Heroic (374MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Deathbringer Saurfang Heroic.wmv">
-              Illumination vs. Deathbringer Saurfang Heroic (346MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Gunship Battle Heroic.wmv">
-              Illumination vs. Gunship Battle Heroic (499MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lady Deathwhisper Heroic.wmv">
-              Illumination vs. Lady Deathwhisper Heroic (520MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Lord Marrowgar Heroic.wmv">
-              Illumination vs. Lord Marrowgar Heroic (562MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Professor Putricide Heroic.wmv">
-              Illumination vs. Professor Putricide Heroic (472MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Illumination vs. Rotface Heroic.wmv">
-              Illumination vs. Rotface Heroic (376MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana'thel Heroic.wmv">
-              Sallskapsraiden vs. Blood-Queen Lana'thel Heroic (172MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Deathbringer Saurfang.wmv">
-              Sallskapsraiden vs. Deathbringer Saurfang (258MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Festergut Heroic HighBitrate.wmv">
-              Sallskapsraiden vs. Festergut Heroic (1.05GB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Gunship Battle.wmv">
-              Sallskapsraiden vs. Gunship Battle (192MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lady Deathwhisper Full House.wmv">
-              Sallskapsraiden vs. Lady Deathwhisper Full House (81MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Lord Marrowgar Heroic.wmv">
-              Sallskapsraiden vs. Lord Marrowgar Heroic (375MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Professor Putricide.wmv">
-              Sallskapsraiden vs. Professor Putricide (220MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Rotface.wmv">
-              Sallskapsraiden vs. Rotface (173MB)
-            </a>
-          </li>
-          <li>
-            <a href="http://www.gnurken.com/movies/wow-movies/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Valithria Dreamwalker Heroic.wmv">
-              Sallskapsraiden vs. Valithria Dreamwalker Heroic (307MB)
-            </a>
-          </li>
-        </ul>
-      </Col>
-    </Row>
-
-  </div>
-);
+export default IcecrownCitadel;

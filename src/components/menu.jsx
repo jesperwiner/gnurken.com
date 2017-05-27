@@ -6,7 +6,6 @@ import './menu.scss';
 const Menu = ({ routing }) => {
   const path = routing.locationBeforeTransitions.pathname.split('/')[1];
 
-  console.log(path);
   const handleClick = () => {
     window.location.assign('https://undecided.gnurken.com');
   };
@@ -52,7 +51,7 @@ const Menu = ({ routing }) => {
           </NavDropdown>
 
           <NavDropdown id={3} eventKey={'/movies'} title="Movies">
-            <LinkContainer to="/movies/wow-movies">
+            <LinkContainer to="/movies/wow-movies/other/other">
               <MenuItem eventKey={'/movies/wow-movies'}>World of Warcraft</MenuItem>
             </LinkContainer>
             <LinkContainer to="/movies/other-movies">
