@@ -1,2 +1,0 @@
-# gnurken.com
-Gnurken
