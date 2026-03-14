@@ -8,8 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` — Production build
 - `npm run start` — Start production server
 - `npm run lint` — Run ESLint
-
-No test framework is configured.
+- `npm run test` — Run tests with Vitest
 
 ## Architecture
 
@@ -33,7 +32,7 @@ Google Fonts (Geist Sans & Mono) loaded via `next/font/google` in `src/app/layou
 
 ### Images
 
-Uses `next/image` with remote patterns configured in `next.config.ts` for `www.gnurken.com` and `media.licdn.com`.
+Uses `next/image` with remote patterns configured in `next.config.ts` for `www.gnurken.com`, `media.licdn.com`, and `image.tmdb.org`.
 
 ### Animations
 

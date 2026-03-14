@@ -8,7 +8,16 @@
       "Bash(node:*)",
       "Bash(npm uninstall:*)",
       "Bash(npm run:*)",
-      "Bash(gh pr:*)"
+      "Bash(gh pr:*)",
+      "Bash(grep:*)",
+      "Bash(curl:*)",
+      "Bash(echo === Tetris Boxshot ===:*)",
+      "Bash(npm test:*)",
+      "Bash(echo:*)",
+      "Bash(md5:*)",
+      "Bash(cat:*)",
+      "Bash(npm view:*)",
+      "Bash(npm audit:*)"
     ]
   }
 }
