@@ -8,7 +8,7 @@ export default function About() {
     <div className="font-sans grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
       <Navigation />
 
-      <main className="flex flex-col gap-8 items-center text-center max-w-4xl px-8 py-20">
+      <main className="flex flex-col gap-8 items-center text-center max-w-4xl px-8 py-10">
         {/* About Header */}
         <div className="mb-2">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-1 font-[family-name:var(--font-geist-mono)] tracking-tight">

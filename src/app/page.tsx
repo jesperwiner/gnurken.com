@@ -36,7 +36,7 @@ export default function Home() {
             The real Gnurken, not that other dude that took my name
           </p>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-6 font-[family-name:var(--font-geist-mono)]">
           <Link href="/about" className="flex flex-col items-center gap-2">
             <Image
               src="/1682940540988.jpeg"
@@ -62,7 +62,39 @@ export default function Home() {
             <span className="text-sm text-white">WoW Movies</span>
           </Link>
           <Link href="/contact" className="flex flex-col items-center gap-2">
-            <div className="w-20 h-20 rounded-full bg-green-500 flex items-center justify-center text-white font-bold hover:scale-110 transition-transform" />
+            <div className="w-20 h-20 rounded-full bg-white/10 border border-gray-700 flex items-center justify-center text-white font-bold hover:scale-110 transition-transform">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-9 h-9"
+              >
+                <defs>
+                  <linearGradient
+                    id="mail-grad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#60a5fa" />
+                    <stop offset="100%" stopColor="#a78bfa" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="2"
+                  y="4"
+                  width="20"
+                  height="16"
+                  rx="2"
+                  stroke="url(#mail-grad)"
+                />
+                <path d="M22 4L12 13L2 4" stroke="url(#mail-grad)" />
+              </svg>
+            </div>
             <span className="text-sm text-white">Contact</span>
           </Link>
           <Link href="/gaming-rig" className="flex flex-col items-center gap-2">

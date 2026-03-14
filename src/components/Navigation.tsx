@@ -2,182 +2,105 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/movies", label: "Movies" },
+  { href: "/gaming-rig", label: "Gaming Rig" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Navigation() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const getLinkClass = (path: string) => {
-    return pathname === path
-      ? "block px-4 py-2 text-red-500 hover:bg-gray-700 transition-colors"
-      : "block px-4 py-2 text-white hover:bg-gray-700 transition-colors";
-  };
+  const close = useCallback(() => setIsOpen(false), []);
+
+  useEffect(() => {
+    close();
+  }, [pathname, close]);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 w-full px-8 py-3 sm:px-20 bg-black/90 backdrop-blur-sm border-b border-gray-700/50">
-      <div className="flex justify-between items-center">
-        <Link
-          href="/"
-          className="flex items-center hover:opacity-80 transition-opacity"
-        >
-          <Image
-            src="/logo.png"
-            alt="Gnurken logo"
-            width={100}
-            height={100}
-            priority
-          />
-        </Link>
-
-        {/* Desktop Dropdown Menu */}
-        <div className="hidden md:block relative">
-          <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-white hover:text-gray-300 transition-colors flex items-center space-x-2"
-            style={{ fontFamily: "Verdana, sans-serif" }}
+    <>
+      <nav className="sticky top-0 z-50 w-full px-6 py-3 sm:px-12 bg-black/90 border-b border-gray-700/50">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <Link
+            href="/"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <span>Menu</span>
-            <svg
-              className={`w-4 h-4 transition-transform ${
-                isDropdownOpen ? "rotate-180" : ""
-              }`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
+            <Image
+              src="/logo.png"
+              alt="Gnurken logo"
+              width={80}
+              height={80}
+              priority
+            />
+          </Link>
 
-          {/* Dropdown Content */}
-          {isDropdownOpen && (
-            <div
-              className="absolute right-0 mt-2 w-36 bg-black/90 backdrop-blur-sm rounded-lg shadow-lg border border-gray-700"
-              style={{ fontFamily: "Verdana, sans-serif" }}
-            >
-              <div className="py-2">
-                <Link
-                  href="/"
-                  className={getLinkClass("/")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className={getLinkClass("/about")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/movies"
-                  className={getLinkClass("/movies")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  Movies
-                </Link>
-                <Link
-                  href="/gaming-rig"
-                  className={getLinkClass("/gaming-rig")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  Gaming Rig
-                </Link>
-                <Link
-                  href="/projects"
-                  className={getLinkClass("/projects")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  Projects
-                </Link>
-                <Link
-                  href="/contact"
-                  className={getLinkClass("/contact")}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          )}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="relative w-8 h-8 flex items-center justify-center"
+            aria-label="Open menu"
+          >
+            <span className="absolute h-0.5 w-6 bg-white rounded -translate-y-2" />
+            <span className="absolute h-0.5 w-6 bg-white rounded" />
+            <span className="absolute h-0.5 w-6 bg-white rounded translate-y-2" />
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden">
+      {/* Overlay */}
+      <div
+        className={`fixed inset-0 z-40 bg-black/70 transition-opacity duration-200 ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={close}
+      />
+
+      {/* Slide drawer */}
+      <div
+        className={`fixed top-0 right-0 z-50 h-full w-64 bg-[#0a0a0f] border-l border-gray-700/50 will-change-transform transition-transform duration-200 ease-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end px-6 pt-5">
           <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-white hover:text-gray-300"
+            onClick={close}
+            className="relative w-8 h-8 flex items-center justify-center"
+            aria-label="Close menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            <span className="absolute h-0.5 w-6 bg-white rounded rotate-45" />
+            <span className="absolute h-0.5 w-6 bg-white rounded -rotate-45" />
           </button>
+        </div>
+        <div className="flex flex-col pt-6 px-4 gap-1">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={close}
+              className={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                pathname === href
+                  ? "text-red-400 bg-white/10"
+                  : "text-gray-300 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       </div>
-
-      {/* Mobile Dropdown */}
-      {isDropdownOpen && (
-        <div
-          className="md:hidden mt-4 bg-black/90 backdrop-blur-sm rounded-lg border border-gray-700 w-36 ml-auto"
-          style={{ fontFamily: "Verdana, sans-serif" }}
-        >
-          <div className="py-2">
-            <Link
-              href="/"
-              className={getLinkClass("/")}
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={getLinkClass("/about")}
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              About
-            </Link>
-            <a
-              href="#services"
-              className="block px-4 py-2 text-white hover:bg-gray-700 transition-colors"
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              Services
-            </a>
-            <a
-              href="#portfolio"
-              className="block px-4 py-2 text-white hover:bg-gray-700 transition-colors"
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              className="block px-4 py-2 text-white hover:bg-gray-700 transition-colors"
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      )}
-    </nav>
+    </>
   );
 }
