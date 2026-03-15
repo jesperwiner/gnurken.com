@@ -2,7 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+}) as unknown as React.ComponentType<{
+  url: string;
+  controls?: boolean;
+  playing?: boolean;
+  width?: string;
+  height?: string;
+}>;
 import { expansions } from "./data";
 
 const allVideos = expansions.flatMap((e) => e.raids.flatMap((r) => r.videos));

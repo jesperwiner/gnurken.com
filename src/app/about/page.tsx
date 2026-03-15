@@ -1,5 +1,3 @@
-"use client";
-
 import Navigation from "@/components/Navigation";
 import FadeImage from "@/components/FadeImage";
 
