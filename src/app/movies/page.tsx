@@ -2,16 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
-import dynamic from "next/dynamic";
-const ReactPlayer = dynamic(() => import("react-player"), {
-  ssr: false,
-}) as unknown as React.ComponentType<{
-  url: string;
-  controls?: boolean;
-  playing?: boolean;
-  width?: string;
-  height?: string;
-}>;
 import { expansions } from "./data";
 
 const allVideos = expansions.flatMap((e) => e.raids.flatMap((r) => r.videos));
@@ -143,13 +133,14 @@ export default function Movies() {
                 </div>
                 {activeVideo ? (
                   <div className="aspect-video bg-black">
-                    <ReactPlayer
-                      url={activeVideo}
+                    <video
+                      key={activeVideo}
                       controls
-                      playing={userClicked}
-                      width="100%"
-                      height="100%"
-                    />
+                      autoPlay={userClicked}
+                      className="w-full h-full"
+                    >
+                      <source src={activeVideo} type="video/mp4" />
+                    </video>
                   </div>
                 ) : (
                   <div className="flex items-center justify-center aspect-video text-white/30 text-lg">
