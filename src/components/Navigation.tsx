@@ -8,9 +8,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/movies", label: "Movies" },
-  { href: "/gaming-rig", label: "Gaming Rig" },
-  { href: "/projects", label: "Projects" },
+  { href: "/movies", label: "WoW Movies" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,7 +31,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full px-6 py-3 sm:px-12 bg-black/90 border-b border-gray-700/50">
+      <nav className="sticky top-0 z-50 w-full px-6 py-3 sm:px-12 bg-black/90">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <Link
             href="/"
@@ -58,6 +56,13 @@ export default function Navigation() {
             <span className="absolute h-0.5 w-6 bg-white rounded translate-y-2" />
           </button>
         </div>
+        <div
+          className="absolute bottom-0 left-0 w-full h-[2px] bg-[length:200%_100%] animate-[gradient-slide_20s_linear_infinite]"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, #0f3460, #e94560, #533483, #0f3460, #e94560, #533483, #0f3460)",
+          }}
+        />
       </nav>
 
       {/* Overlay */}

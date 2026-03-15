@@ -20,7 +20,7 @@ export default function Home() {
       <Navigation />
 
       <main
-        className={`flex flex-col gap-8 items-center p-8 pb-20 sm:p-20 transition-opacity duration-700 ${allLoaded ? "opacity-100" : "opacity-0"}`}
+        className={`flex flex-col gap-8 items-center p-8 pb-20 sm:p-20 sm:pt-5 transition-opacity duration-700 ${allLoaded ? "opacity-100" : "opacity-0"}`}
       >
         <div className="flex flex-col items-center">
           <Image
@@ -96,10 +96,6 @@ export default function Home() {
               </svg>
             </div>
             <span className="text-sm text-white">Contact</span>
-          </Link>
-          <Link href="/gaming-rig" className="flex flex-col items-center gap-2">
-            <div className="w-20 h-20 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold hover:scale-110 transition-transform" />
-            <span className="text-sm text-white">Gaming Rig</span>
           </Link>
         </div>
       </main>
