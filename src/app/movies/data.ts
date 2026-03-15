@@ -1,4 +1,4 @@
-const BASE = "http://www.gnurken.com/movies/wow-movies";
+const BASE = "/movies/wow-movies";
 
 export type Video = {
   title: string;
@@ -657,7 +657,7 @@ export const expansions: Expansion[] = [
           },
           {
             title: "Sallskapsraiden vs. Blood-Queen Lana'thel",
-            url: `${BASE}/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana`,
+            url: `${BASE}/wrath-of-the-lich-king/icecrown-citadel/Sallskapsraiden vs. Blood-Queen Lana'thel.mp4`,
           },
           {
             title: "Sallskapsraiden vs. Deathbringer Saurfang",
